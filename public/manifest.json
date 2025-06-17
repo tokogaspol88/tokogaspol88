@@ -1,0 +1,27 @@
+{
+  "name": "Tokogaspol88 - Toko Kebutuhan Otomotif",
+  "short_name": "Tokogaspol88",
+  "description": "Toko online terpercaya untuk kebutuhan otomotif Anda",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1f2937",
+  "theme_color": "#1f2937",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "120x120",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["shopping", "automotive", "business"],
+  "lang": "id",
+  "scope": "/",
+  "related_applications": [],
+  "prefer_related_applications": false
+}
