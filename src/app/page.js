@@ -83,7 +83,7 @@ export default function Home() {
                 <span className="text-blue-400 font-bold text-lg">Testimoni Pengguna</span>
               </div>
               <p className="text-gray-300 italic">
-                "Truk jalan terus? Pakai Tukang Solar. Sekali pakai langsung terasa bedanya."
+                &quot;Truk jalan terus? Pakai Tukang Solar. Sekali pakai langsung terasa bedanya.&quot;
               </p>
             </div>
           </div>
@@ -206,6 +206,131 @@ export default function Home() {
                   Ribuan pelanggan telah merasakan perbedaan kualitas produk dan pelayanan kami. 
                   Bergabunglah dengan komunitas Gaspol 88 untuk pengalaman berbelanja yang memuaskan!
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Testimonials Section */}
+        <div className="w-full max-w-6xl mb-12">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-emerald-400">
+              💬 Testimoni Pelanggan
+            </h2>
+            <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+              Ribuan pelanggan telah merasakan manfaat Aditif Tukang Solar. 
+              Lihat testimoni asli dari pengguna setia kami di seluruh Indonesia.
+            </p>
+          </div>
+
+          {/* Desktop View - Grid Layout */}
+          <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-6 mb-8">
+            {[1, 2, 3, 4, 5].map((num) => (
+              <div 
+                key={num}
+                className="group relative bg-gray-800/30 rounded-xl p-4 border border-gray-700 hover:border-emerald-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer"
+              >
+                <div className="relative overflow-hidden rounded-lg">
+                  <Image
+                    src={`/testi${num}.png`}
+                    alt={`Testimoni pelanggan ${num} - Aditif Tukang Solar`}
+                    width={300}
+                    height={400}
+                    className="w-full h-auto object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="flex items-center justify-center space-x-2">
+                        <svg className="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span className="text-white text-sm font-semibold">Testimoni Asli</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-3 text-center">
+                  <div className="flex justify-center space-x-1 mb-2">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg key={star} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-400 text-xs">Pelanggan #{num}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile View - Horizontal Scroll */}
+          <div className="md:hidden mb-8">
+            <div className="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+              {[1, 2, 3, 4, 5].map((num) => (
+                <div 
+                  key={num}
+                  className="flex-shrink-0 w-64 bg-gray-800/30 rounded-xl p-4 border border-gray-700"
+                >
+                  <div className="relative overflow-hidden rounded-lg mb-3">
+                    <Image
+                      src={`/testi${num}.png`}
+                      alt={`Testimoni pelanggan ${num} - Aditif Tukang Solar`}
+                      width={300}
+                      height={400}
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <div className="flex justify-center space-x-1 mb-2">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <svg key={star} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                      ))}
+                    </div>
+                    <p className="text-gray-400 text-xs">Pelanggan #{num}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Testimonials Summary */}
+          <div className="bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-500/30 rounded-xl p-8">
+            <div className="text-center">
+              <div className="flex items-center justify-center space-x-3 mb-4">
+                <span className="text-3xl">📸</span>
+                <h3 className="text-2xl font-bold text-emerald-400">Testimoni Asli Pelanggan</h3>
+              </div>
+              <p className="text-gray-300 text-lg mb-6">
+                Semua testimoni di atas adalah bukti nyata dari pelanggan yang telah merasakan manfaat 
+                <span className="text-emerald-400 font-semibold"> Aditif Tukang Solar</span> untuk kendaraan diesel mereka.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">🚛</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-emerald-400 mb-2">Truk & Bus</h4>
+                  <p className="text-gray-400 text-sm">Hemat BBM hingga 20%</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">🚗</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-emerald-400 mb-2">Mobil Diesel</h4>
+                  <p className="text-gray-400 text-sm">Tarikan lebih responsif</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">⚡</span>
+                  </div>
+                  <h4 className="text-lg font-bold text-emerald-400 mb-2">Genset</h4>
+                  <p className="text-gray-400 text-sm">Mesin lebih halus</p>
+                </div>
               </div>
             </div>
           </div>
